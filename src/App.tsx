@@ -8,13 +8,13 @@ import './index.css'
 function App() {
 
   return (
-    <>
+    <main className="overflow-clip">
       <Header />
       <Hero />
       <Features />
       <Articles />
       <Footer />
-    </>
+    </main>
   )
 }
 

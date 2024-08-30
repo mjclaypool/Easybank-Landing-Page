@@ -4,7 +4,7 @@ import mockups from "../../images/image-mockups.png"
 
 export default function Hero() {
   return (
-    <div className="relative flex flex-col xl:flex-row-reverse xl:justify-between xl:max-h-[646px]">
+    <div className="relative flex flex-col xl:flex-row-reverse xl:justify-between xl:max-h-[646px] bg-n-light-grey">
       <div>
         <img src={mockups} alt="Hero image of Easybank mock-ups" className="xl:hidden h-[420px] absolute left-[50%] translate-x-[-50%] -top-[122px] object-cover z-0" />
         <img src={heroImgM} alt="Background geometric shapes" className="xl:hidden h-[290px] w-full object-cover" />

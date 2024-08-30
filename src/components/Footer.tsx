@@ -1,24 +1,25 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faPinterest } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import logo from "../../images/logo-footer.svg";
-import facebook from "../../images/icon-facebook.svg";
-import youtube from "../../images/icon-youtube.svg";
-import twitter from "../../images/icon-twitter.svg";
-import pinterest from "../../images/icon-pinterest.svg";
-import instagram from "../../images/icon-instagram.svg";
 
 export default function Footer() {
-  let iconStyle: string = "h-[24px] object-contain cursor-pointer";
-  let navStyle: string = "xl:text-left cursor-pointer hover:text-p-lime-green hover:opacity-60";
+  const iconStyle: string = "h-[24px] w-[24px] fill-white object-contain cursor-pointer hover:text-p-lime-green";
+  const navStyle: string = "xl:text-left cursor-pointer hover:text-p-lime-green";
 
   return (
     <footer className="flex flex-col xl:flex-row items-center xl:items-start xl:justify-between gap-8 font-pubSans text-n-light-grey bg-p-dark-blue py-10 xl:px-40">
       <div className="flex flex-col items-center xl:items-start gap-8">
         <img src={logo} alt="Easybank company logo" className="object-contain" />
         <div className="flex gap-4">
-          <img src={facebook} alt="Facebook logo" className={iconStyle} />
-          <img src={youtube} alt="Youtube logo" className={iconStyle} />
-          <img src={twitter} alt="Twitter logo" className={iconStyle} />
-          <img src={pinterest} alt="Pinterest logo" className={iconStyle} />
-          <img src={instagram} alt="Instagram logo" className={iconStyle} />
+          <FontAwesomeIcon icon={faFacebook} className={iconStyle} />
+          <FontAwesomeIcon icon={faYoutube} className={iconStyle} />
+          <FontAwesomeIcon icon={faTwitter} className={iconStyle} />
+          <FontAwesomeIcon icon={faPinterest} className={iconStyle} />
+          <FontAwesomeIcon icon={faInstagram} className={iconStyle} />
         </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-3 xl:gap-32">
@@ -34,7 +35,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col items-center xl:items-end gap-8">
-        <button type="button" className="bg-gradient-to-r from-p-lime-green to-p-bright-cyan text-[14px] py-2.5 px-8 rounded-full hover:opacity-80">Request Invite</button>
+        <div className="bg-n-white rounded-full">
+          <button type="button" className="bg-gradient-to-r from-p-lime-green to-p-bright-cyan text-[14px] py-2.5 px-8 rounded-full hover:opacity-70">Request Invite</button>
+        </div>
         <p className="text-[15px] text-n-grey-blue xl:text-right">Easybank. All Rights Reserved</p>
       </div>
     </footer>

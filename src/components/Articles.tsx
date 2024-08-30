@@ -40,19 +40,21 @@ export default function Articles() {
   ]
 
   return (
-    <div className="flex flex-col items-center xl:items-start bg-n-light-grey font-pubSans px-6 py-[86px] xl:px-40 xl:pt-[94px] xl:pb-[68px]">
-      <h2 className="text-p-dark-blue text-3xl xl:text-[40px] px-4 pb-6 xl:pb-[42px] xl:px-0">Latest Articles</h2>
-      <div className="flex flex-col xl:flex-row xl:gap-8">
-        {stories.map(story => (
-          <article key={story.id} className="group bg-n-white rounded-md my-3 max-w-[400px] xl:max-w-none cursor-pointer">
-            <img src={story.image} alt={story.altText} className="h-[200px] w-full object-cover rounded-t-md" />
-            <div className="px-6 pt-7 pb-9 xl:px-5 xl:pb-5">
-              <p className="text-[10px] text-n-grey-blue">{story.attr}</p>
-              <h3 className="text-p-dark-blue leading-tight my-2 group-hover:text-p-lime-green">{story.title}</h3>
-              <p className="text-[13px] text-n-grey-blue">{story.description}</p>
-            </div>
-          </article>
-        ))}
+    <div className="flex justify-center bg-n-light-grey w-full">
+      <div className="flex flex-col items-center xl:items-start font-pubSans px-6 py-[86px] xl:px-40 xl:pt-[94px] xl:pb-[68px] max-w-[1920px]">
+        <h2 className="text-p-dark-blue text-3xl xl:text-[40px] px-4 pb-6 xl:pb-[42px] xl:px-0">Latest Articles</h2>
+        <div className="flex flex-col xl:flex-row xl:gap-8">
+          {stories.map(story => (
+            <article key={story.id} className="group bg-n-white rounded-md my-3 max-w-[400px] xl:max-w-none cursor-pointer">
+              <img src={story.image} alt={story.altText} className="h-[200px] w-full object-cover rounded-t-md" />
+              <div className="px-6 pt-7 pb-9 xl:px-5 xl:pb-5">
+                <p className="text-[10px] text-n-grey-blue">{story.attr}</p>
+                <h3 className="text-p-dark-blue leading-tight my-2 group-hover:text-p-lime-green">{story.title}</h3>
+                <p className="text-[13px] text-n-grey-blue">{story.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   )

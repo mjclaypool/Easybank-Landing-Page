@@ -36,17 +36,19 @@ export default function Features() {
   ]
 
   return (
-    <div className="flex flex-col items-center text-center xl:items-start xl:text-start font-pubSans bg-n-light-grey-blue px-4 pb-8 xl:px-40 xl:pt-[44px] xl:pb-[86px]">
-      <h2 className="text-p-dark-blue text-3xl xl:text-[40px] px-4 pt-16 pb-4 xl:px-0 xl:pb-8 max-w-[400px] xl:max-w-none">Why choose Easybank?</h2>
-      <p className="text-n-grey-blue text-[15px] xl:text-[18px] pb-12 xl:pb-14 max-w-[400px] xl:max-w-[700px]">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
-      <div className="flex flex-col xl:flex-row xl:gap-4 max-w-[400px] xl:max-w-none">
-        {features.map(card => (
-          <div key={card.id} className="my-5">
-            <img src={card.image} alt={card.altText} className="mx-auto xl:mx-0" />
-            <h3 className="text-p-dark-blue text-xl xl:text-2xl my-5 xl:my-8">{card.title}</h3>
-            <p className="text-n-grey-blue text-[15px] xl:text-[16px]">{card.description}</p>
-          </div>
-        ))}
+    <div className="flex justify-center bg-n-light-grey-blue w-full">
+      <div className="flex flex-col items-center text-center xl:items-start xl:text-start font-pubSans px-4 pb-8 xl:px-40 xl:pt-[44px] xl:pb-[86px] max-w-[1920px]">
+        <h2 className="text-p-dark-blue text-3xl xl:text-[40px] px-4 pt-16 pb-4 xl:px-0 xl:pb-8 max-w-[400px] xl:max-w-none">Why choose Easybank?</h2>
+        <p className="text-n-grey-blue text-[15px] xl:text-[18px] pb-12 xl:pb-14 max-w-[400px] xl:max-w-[700px]">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
+        <div className="flex flex-col xl:flex-row xl:gap-4 max-w-[400px] xl:max-w-none">
+          {features.map(card => (
+            <div key={card.id} className="my-5">
+              <img src={card.image} alt={card.altText} className="mx-auto xl:mx-0" />
+              <h3 className="text-p-dark-blue text-xl xl:text-2xl my-5 xl:my-8">{card.title}</h3>
+              <p className="text-n-grey-blue text-[15px] xl:text-[16px]">{card.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
